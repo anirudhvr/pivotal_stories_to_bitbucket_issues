@@ -109,7 +109,7 @@ BBIssueClient.new('https://api.bitbucket.org/1.0/repositories/oakenshield/easyen
                   'yourBBusername', 'BBpassword')
 
 p = PivotalStoryDump.new(ARGV[0])
-p.array_of_hashes.each do |story|
+p.each do |story|
     issue = Hash.new
     %w{title  content  responsible  priority  status  kind}.each do |k|
         issue[k] = story[k]
